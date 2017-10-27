@@ -1,0 +1,28 @@
+version: "3"
+services:
+  web:
+    # replace username/repo:tag with your name and image details
+    image: waue0920/starlight-dockertest:latest
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 10G
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "18000:8000"
+      - "55000:54000"
+      - "55001:54001"
+      - "55002:54002"
+      - "55003:54003"
+      - "55004:54004"
+      - "55005:54005"
+      - "55006:54006"
+      - "55007:54007"
+      - "55008:54008"
+    networks:
+      - webnet
+networks:
+  webnet:
