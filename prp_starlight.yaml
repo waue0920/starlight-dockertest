@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: starlight-dockertest
+spec:
+  containers:
+  - name: starlight-dockertest
+    image: waue0920/starlight-dockertest
+    imagePullPolicy: Always
+    args: ["sudo", "jupyterhub"]
+    resources:
+  restartPolicy: Never
